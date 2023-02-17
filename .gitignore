@@ -51,3 +51,24 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Miscelaneous Filetypes
+*.bak
+*.old
+
+# Patch Files
+*.orig
+*.rej
+*.diff
+
+*.zip
+*.tar
+*.tar.*
+*.7z
+*.cpio
+*.rar
+*.xz
+*.lz
+*.bz4
+*.gzip
+*.gz
