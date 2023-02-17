@@ -72,3 +72,6 @@ dkms.conf
 *.bz4
 *.gzip
 *.gz
+
+# Binary files
+bin/
