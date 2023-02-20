@@ -1,6 +1,10 @@
 #ifndef _TYPES_HPP_
 #define _TYPES_HPP_
 
+#include <cstdbool>
+#include <cstddef>
+#include <cstdint>
+
 #define natural unsigned int
 #define long_natural unsigned long long
 #define short_natural unsigned short
