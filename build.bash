@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 # AUTHOR(S): Luis Valencia, Guennadi Maximov
+# LICENSE: MIT
+
+# TODO: Short and long options parsing.
+# S_OPTS=""
 
 CC=gcc
 CXX=g++
@@ -36,4 +40,4 @@ OPTIM_FLAGS=(
 
 # TODO: Function to decide whether to compile an object or a library.
 
-$CXX $CFLAGS $LIBFLAGS $INCLUDEFLAGS -o bin/window
+"$CXX" "${CFLAGS[*]}" "${LIBFLAGS[*]}" "${INCLUDEFLAGS[*]}" -o bin/window
