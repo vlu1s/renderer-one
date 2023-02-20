@@ -1,8 +1,31 @@
+#include <stdio.h>
+
 #define GLFW_INCLUDE_VULKAN
 #include <GLFW/glfw3.h>
 
+#define internal static // internal function
+#define local_persist static
+#define global_variable static
+
+// TODO(luis): Should these be global?
 const uint32_t WIDTH = 1280;
 const uint32_t HEIGHT = 720;
+
+/* Callback function to process input events */
+internal void key_callback(
+	GLFWwindow* window,
+	int key,
+	int scancode,
+	int action,
+	int mods)
+{
+	printf("Input event: key = %d, scancode = %d, action = %d, mods = %d\n",
+		key, scancode, action, mods);
+	if(key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
+	{
+		glfwSetWindowShouldClose(window, GLFW_TRUE);
+	}
+}
 
 int main()
 {
@@ -24,6 +47,9 @@ int main()
 		glfwTerminate();
 		return -1;
 	}
+
+	/* Set the key callback function to the window */
+	glfwSetKeyCallback(window, key_callback);
 
 	/** TODO(luis): Initialize Vulkan? **/
 
