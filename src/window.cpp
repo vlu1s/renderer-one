@@ -1,15 +1,6 @@
+#include "../include/window.hpp"
 #include <stdio.h>
-
-#define GLFW_INCLUDE_VULKAN
-#include <GLFW/glfw3.h>
-
-#define internal static // internal function
-#define local_persist static
-#define global_variable static
-
-// TODO(luis): Should these be global?
-const uint32_t WIDTH = 1280;
-const uint32_t HEIGHT = 720;
+#include <stdlib.h>
 
 /* Callback function to process input events */
 internal void key_callback(
