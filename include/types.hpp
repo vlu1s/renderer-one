@@ -1,9 +1,10 @@
 #ifndef _TYPES_HPP_
 #define _TYPES_HPP_
 
-#include <cstdbool>
-#include <cstddef>
-#include <cstdint>
+typedef unsigned int natural;
+typedef unsigned long long long_natural;
+typedef unsigned short short_natural;
+typedef unsigned char uchar;
 
 /**< FIXME: (Jeff) Why the need to rename `static`? */
 

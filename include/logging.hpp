@@ -125,10 +125,7 @@ static char *bg = log_colours[LogBlack].DEFAULT_COLOUR_FMT;  /**< Initial value 
  *
  * @param `char *txt` To-be formatted text. This variable will be modified within the function
  */
-static void format_txt(char *txt);
-
-/* Print an error message to STDERR and exit. */
-void die(const char *msg, int status);
+void format_txt(char *txt);
 
 /**
  * @brief Print an error message to `STDERR` and exit
