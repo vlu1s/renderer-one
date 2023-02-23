@@ -1,7 +1,7 @@
 #ifndef WINDOW_HPP
 #define WINDOW_HPP
 
-#include <GLFW/glfw3.h>
+#include <vulkan/vulkan.h>
 #define GLFW_INCLUDE_VULKAN
 #include <GLFW/glfw3.h>
 
@@ -29,5 +29,9 @@ internal void key_callback(
     const int action,
     const int mods
 );
+
+
+static inline bool vk_works(void);
+static void vulkan_init(void);
 
 #endif /**! WINDOW_HPP */
