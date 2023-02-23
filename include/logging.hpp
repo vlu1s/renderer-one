@@ -125,7 +125,7 @@ static char *bg = log_colours[LogBlack].DEFAULT_COLOUR_FMT;  /**< Initial value 
  *
  * @param `char *txt` To-be formatted text. This variable will be modified within the function
  */
-void format_txt(char *txt);
+static void format_txt(char *txt);
 
 /**
  * @brief Print an error message to `STDERR` and exit
@@ -133,15 +133,7 @@ void format_txt(char *txt);
  * @param `const char *msg` Input text pointer
  * @param `const int status` Exit code status
  */
-void die(const char *msg, const int status);
-
-/**
- * @brief Print error messages to stderr, but without exiting
- *
- * @param `const char *msg` Message output
- * @param `const int error` Error signal
- */
-void error_callback(const char *msg, const int error);
+static void die(const char *msg, const int status);
 
 /**
  * @brief Print error messages to stderr, without exiting. Also with colors!
@@ -152,6 +144,6 @@ void error_callback(const char *msg, const int error);
  * @param `const colour_t *col_format`
  * @param `const uint severity`
  */
-void color_warn(const char *msg, const colour_t *col_format, const uint severity);
+static void color_warn(const char *msg, const colour_t *col_format, const uint severity);
 
 #endif /*!_LOGGING_HPP_ */

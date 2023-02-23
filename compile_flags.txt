@@ -1,0 +1,11 @@
+-std=c++20
+-g
+-g3
+-ggdb
+-Wall
+-Wextra
+-pedantic
+-Iinclude
+-Llib
+-lglfw
+-xc++

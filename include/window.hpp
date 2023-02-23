@@ -4,7 +4,6 @@
 #include <GLFW/glfw3.h>
 #define GLFW_INCLUDE_VULKAN
 
-#include "types.hpp"  /**< Custom macros and/or typedefs */
 #include "logging.hpp" /**< Logging utilities */
 
 static natural WIDTH = 1280;

@@ -1,9 +1,10 @@
-#include "../include/window.hpp"
+#include <logging.hpp>
+#include <window.hpp>
 
 /** Global window pointer */
 GLFWwindow *WINDOW;
 
-void window_create(const char *title);
+/* void window_create(const char *title); */
 
 /**
  * @brief TODO: (Jeff) description
@@ -13,6 +14,17 @@ void vulkan_init(void)
     /**< TODO: (Jeff) Build this function. */
     return;
 }
+
+/**
+ * @brief Print error messages to stderr, but without exiting
+ *
+ * @param `const char *msg` Message output
+ * @param `const int error` Error signal
+ */
+/* void error_callback(const char *msg) */
+/* { */
+/*     std::fprintf(stderr, "%s\n", msg); */
+/* } */
 
 /*
  * @brief TODO: description
@@ -24,10 +36,10 @@ void vulkan_init(void)
  * @param mods TODO: parameter
  */
 internal void key_callback(GLFWwindow* window,
-                           const int key,              /**< Signed?[ ] Variable?[ ] */
-                           const int scancode,         /**< Signed?[ ] Variable?[ ] */
-                           const int action,           /**< Signed?[ ] Variable?[ ] */
-                           const int mods              /**< Signed?[ ] Variable?[ ] */)
+                           const int key,
+                           const int scancode,
+                           const int action,
+                           const int mods)
 {
     std::printf("Input event: key = %d, scancode = %d, action = %d, mods = %d\n",
                 key, scancode, action, mods);
@@ -51,13 +63,10 @@ int main(void)
 
     /**< Create a hint for the following window to be created. */
     glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
-    glfwSetErrorCallback(error_callback);
 
     /**< Create a windowed mode window */
-    WINDOW = glfwCreateWindow(WIDTH, HEIGHT, "Renderer One", NULL, NULL);
-
     /**< If window cannot be created, exit. */
-    if(!WINDOW)  /**< WARNING: (Jeff) Suggesting one-liner ==> `if ((WINDOW = glfwCreateWindow(...)))` */
+    if(!(WINDOW = glfwCreateWindow(WIDTH, HEIGHT, "RENDERER ONE", NULL, NULL)))
     {
         /**< TODO: (luis) logging */
         glfwTerminate();
