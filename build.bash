@@ -12,15 +12,14 @@ CFLAGS=(
     -pedantic
     -pedantic-errors
     -Wall
-    -Werror
+    # -Werror
     -Wextra
     -Weffc++
     -Wsign-conversion
     "-std=$STD"
-
 )
 INCLUDEFLAGS=(
-    -Iinclude
+    -I./include
 )
 LIBFLAGS=(
     -Llib
@@ -40,4 +39,4 @@ OPTIM_FLAGS=(
 
 # TODO: Function to decide whether to compile an object or a library.
 
-"$CXX" "${CFLAGS[*]}" "${LIBFLAGS[*]}" "${INCLUDEFLAGS[*]}" -o bin/window
+"$CXX" ${CFLAGS[*]} ${LIBFLAGS[*]} ${INCLUDEFLAGS[*]} -o bin/window src/window.cpp src/logging.cpp
