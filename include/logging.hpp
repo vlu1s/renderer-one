@@ -51,6 +51,7 @@ typedef struct _RGBA {
     float a;
 } rgba_t;
 
+
 /**
  * @brief Colorscheme indexes
  */
@@ -76,7 +77,7 @@ enum
     LogBrMagenta,
     LogWhite,
 
-    /**< WARNING: (Jeff) The value below MUST always be the last one */
+    /**  WARNING: (Jeff) The value below MUST always be the last one */
     LogColLast,
 };
 
@@ -119,6 +120,7 @@ static colour_t log_colours[LogColLast] = {
 static char *fg = log_colours[LogWhite].DEFAULT_COLOUR_FMT;  /**< Initial value */
 static char *bg = log_colours[LogBlack].DEFAULT_COLOUR_FMT;  /**< Initial value */
 
+
 /**
  * @brief Reformat a string to enable a coloured output
  * @see `colour_t` type to format text
@@ -126,6 +128,7 @@ static char *bg = log_colours[LogBlack].DEFAULT_COLOUR_FMT;  /**< Initial value 
  * @param `char *txt` To-be formatted text. This variable will be modified within the function
  */
 static void format_txt(char *txt);
+
 
 /**
  * @brief Print an error message to `STDERR` and exit

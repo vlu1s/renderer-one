@@ -3,8 +3,11 @@
 
 #include <GLFW/glfw3.h>
 #define GLFW_INCLUDE_VULKAN
+#include <GLFW/glfw3.h>
 
 #include "logging.hpp" /**< Logging utilities */
+
+GLFWwindow *WINDOW = NULL;
 
 static natural WIDTH = 1280;
 static natural HEIGHT = 720;
@@ -12,6 +15,7 @@ static natural HEIGHT = 720;
 /**
  * @brief Callback function to process input events
  * @see `GLFWwindow`
+ *
  * @param window TODO: (Jeff) parameter
  * @param key TODO: (Jeff) parameter
  * @param scancode TODO: (Jeff) parameter

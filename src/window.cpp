@@ -2,7 +2,7 @@
 #include <window.hpp>
 
 /** Global window pointer */
-GLFWwindow *WINDOW;
+
 
 /* void window_create(const char *title); */
 
@@ -15,16 +15,24 @@ void vulkan_init(void)
     return;
 }
 
+void render(void) {
+    int w, h;
+
+    /* glfwGetFramebufferSize(WINDOW, &WIDTH, &HEIGHT); */
+}
+
+
+
 /**
  * @brief Print error messages to stderr, but without exiting
  *
  * @param `const char *msg` Message output
  * @param `const int error` Error signal
  */
-/* void error_callback(const char *msg) */
-/* { */
-/*     std::fprintf(stderr, "%s\n", msg); */
-/* } */
+void error_callback(int error, const char *msg)
+{
+    std::fprintf(stderr, "[%d]: %s\n", error, msg);
+}
 
 /*
  * @brief TODO: description
@@ -52,8 +60,6 @@ internal void key_callback(GLFWwindow* window,
 
 int main(void)
 {
-
-
     /**< Initialize glfw library. Exit with error if unsuccessful. */
     if(!glfwInit())
     {
@@ -61,11 +67,14 @@ int main(void)
         return -1;
     }
 
-    /**< Create a hint for the following window to be created. */
+    glfwSetErrorCallback(error_callback);
+    /**< Tell the window not to initialize an OpenGL environment. */
     glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
 
-    /**< Create a windowed mode window */
-    /**< If window cannot be created, exit. */
+    /**
+     * Create a windowed mode window
+     * If window cannot be created, exit
+     */
     if(!(WINDOW = glfwCreateWindow(WIDTH, HEIGHT, "RENDERER ONE", NULL, NULL)))
     {
         /**< TODO: (luis) logging */
@@ -73,6 +82,7 @@ int main(void)
         return -1;
     }
 
+    glfwMakeContextCurrent(WINDOW);
 
     /**< Set the key callback function to the window */
     glfwSetKeyCallback(WINDOW, key_callback);
@@ -84,6 +94,8 @@ int main(void)
     while(!glfwWindowShouldClose(WINDOW))
     {
         glfwPollEvents();
+
+        render();
     }
 
     /**< Window cleanup */
