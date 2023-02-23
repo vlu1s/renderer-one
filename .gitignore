@@ -75,3 +75,4 @@ dkms.conf
 
 # Binary files
 bin/
+lib/
