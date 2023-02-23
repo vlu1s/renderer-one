@@ -1,3 +1,13 @@
+If:
+  PathMatch: [.*\.cpp, .*\.hpp, .*\.hh, .*\.h\+\+, .*\.cc, .*\.c\+\+]
 CompileFlags:
-  Add: [-std=c++20, -Wall, -Wextra, -pedantic, -I./include, -pedantic-errors, -Werror, -Weffc++, -Wsign-conversion, -lglfw3]
+  Add: [-O2, -g, -g3, -ggdb, -Wall, -Wextra, -Iinclude, -I., -Llib, -L., -pedantic, -pthread, -std=c++20, -lglfw]
   Compiler: g++
+
+---
+
+If:
+  PathMatch: [.*\.c, .*\.h]
+CompileFlags:
+  Add: [-O2, -g, -g3, -ggdb, -Wall, -Wextra, -Iinclude, -Llib, -pedantic, -pthread, -lglfw]
+  Compiler: gcc
