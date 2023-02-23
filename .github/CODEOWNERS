@@ -8,3 +8,4 @@ Makefile @DrKJeff16
 /include/ @DrKJeff16 @vlu1s
 .gitignore @DrKJeff16 @vlu1s
 /LICENSE @vlu1s
+/.github/CODEOWNERS @DrKJeff16
