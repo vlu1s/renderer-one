@@ -5,15 +5,14 @@
 #include <cstddef>
 #include <cstdint>
 
-#define natural unsigned int
-#define long_natural unsigned long long
-#define short_natural unsigned short
-#define uchar unsigned char
+/**< FIXME: (Jeff) Why the need to rename `static`? */
 
-/* Reserved for internal methods, prefferably. */
+/** Reserved for internal methods, prefferably */
 #define internal static
+/// FIXME: (Jeff) What's this?
 #define local_persist static
-/* Reserved for globally imported variables from header files. */
+
+/** Reserved for globally imported variables from header files */
 #define global_variable static
 
-#endif /* _TYPES_HPP_ */
+#endif /**!_TYPES_HPP_ */

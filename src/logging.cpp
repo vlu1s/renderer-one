@@ -1,11 +1,6 @@
-#include "../include/operators.hpp"
 #include "../include/logging.hpp"
 
-#include <cstring>
-#include <cstdlib>
-#include <cstdio>
-
-void die(const char *txt, int status)
+void die(const char *txt, const int status)
 {
     FILE *output = std::fopen("/dev/stderr", "w");
     char *err_msg = FILL_SPACE(txt, sizeof(char) * std);

@@ -4,13 +4,21 @@
 #include <GLFW/glfw3.h>
 #define GLFW_INCLUDE_VULKAN
 
-#include "types.hpp"  // Custom macros and/or typedefs.
+#include "types.hpp"  /**< Custom macros and/or typedefs */
+#include "logging.hpp" /**< Logging utilities */
 
-// TODO(luis): Should these be global?
 static natural WIDTH = 1280;
 static natural HEIGHT = 720;
 
-/* Callback function to process input events */
+/**
+ * @brief Callback function to process input events
+ * @see `GLFWwindow`
+ * @param window TODO: (Jeff) parameter
+ * @param key TODO: (Jeff) parameter
+ * @param scancode TODO: (Jeff) parameter
+ * @param action TODO: (Jeff) parameter
+ * @param mods TODO: (Jeff) parameter
+ */
 internal void key_callback(
     GLFWwindow *window,
     const int key,
@@ -19,4 +27,4 @@ internal void key_callback(
     const int mods
 );
 
-#endif // WINDOW_HPP
+#endif /**! WINDOW_HPP */
