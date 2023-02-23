@@ -1,8 +1,10 @@
 /README.md @DrKJeff16 @vlu1s
 .clangd @DrKJeff16
+.clang-format @DrKJeff16
 *.mk @DrKJeff16
 Makefile @DrKJeff16
 /build.bash @vlu1s @DrKJeff16
 /src/ @vlu1s @DrKJeff16
 /include/ @DrKJeff16 @vlu1s
-.gitignore @DrKjeff16 @vlu1s
+.gitignore @DrKJeff16 @vlu1s
+/LICENSE @vlu1s
