@@ -9,3 +9,4 @@ Makefile @DrKJeff16
 .gitignore @DrKJeff16 @vlu1s
 /LICENSE @vlu1s
 /.github/CODEOWNERS @DrKJeff16
+compiling_flags.txt @DrKJeff16
